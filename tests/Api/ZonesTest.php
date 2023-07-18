@@ -2,6 +2,7 @@
 
 namespace Fandeco\DatabusClient\Api;
 
+use Fandeco\DatabusClient\Helpers\CurlFactory;
 use PHPUnit\Framework\TestCase;
 
 class ZonesTest extends TestCase
@@ -15,7 +16,7 @@ class ZonesTest extends TestCase
 
             $this->assertEquals('zones',$method);
             $this->assertEquals(10,$data['limit']);
-
+            return CurlFactory::post($method, $data);
         })->limit(10)->run();
     }
 }

@@ -7,7 +7,7 @@ use PHPUnit\Framework\TestCase;
 class ArticlesTest extends TestCase
 {
     public function testMethod(){
-        $a = Articles::New()->limit(10)->vendor('')->run();
+        $a = Articles::New()->limit(10)->run();
         $this->assertCount(10,$a->response()['data']);
     }
 
