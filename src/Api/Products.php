@@ -9,7 +9,7 @@ use Fandeco\DatabusClient\Abstracts\Builder;
  * @method $this vendor(array $vendor)
  * @method $this article(array $article)
  * @method $this withs(array $withs)
- * @method $this site(array $site)
+ * @method $this site(string $site)
  */
 class Products extends Builder
 {
